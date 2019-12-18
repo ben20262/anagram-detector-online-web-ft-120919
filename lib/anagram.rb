@@ -6,11 +6,13 @@ class Anagram
   end
 
   def match(list)
+    anagrams = []
     if @word.length == list.length
       list.each do |anag|
-        return anag if @word.split("").sort == anag.split("").sort
+        anagrams << anag if @word.split("").sort == anag.split("").sort
       end
     end
+    anagrams
   end
 
 end
