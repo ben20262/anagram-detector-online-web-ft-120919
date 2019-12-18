@@ -7,10 +7,8 @@ class Anagram
 
   def match(list)
     anagrams = []
-    if @word.length == list.length
-      list.each do |anag|
-        anagrams << anag if @word.split("").sort == anag.split("").sort
-      end
+    list.each do |anag|
+      anagrams << anag if @word.split("").sort == anag.split("").sort
     end
     anagrams
   end
