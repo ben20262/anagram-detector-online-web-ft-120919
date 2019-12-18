@@ -6,7 +6,7 @@ class Anagram
   end
 
   def match(list)
-    if @name.length == list.length
+    if @word.length == list.length
       list.each do |anag|
         return anag if @word.split("").sort == anag.split("").sort
       end
